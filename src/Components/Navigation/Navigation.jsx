@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Navigation.module.css";
 import nysc from "../../assets/nysc.png";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+// import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -17,7 +17,9 @@ const Navigation = () => {
         <div className={style.logoContainer}>
           <img src={nysc} alt="NYSC Logo" className={style.logo} />
           <button className={style.mobileMenuButton} onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+            {isMobileMenuOpen ? "✕" : "☰"}
+
+            {/* {isMobileMenuOpen ? <FaTimes /> : <FaBars />} */}
           </button>
         </div>
 
