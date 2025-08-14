@@ -1,28 +1,3 @@
-// import React from "react";
-// import style from "./Navigation.module.css";
-// import nysc from "../../assets/nysc.png";
-
-// const Navigation = () => {
-//     return (
-//         <nav>
-//             <img src={nysc} alt="NYSC Logo" className={style.logo} />
-//             <ul>
-//                 <li><a href="/">Home</a></li>
-//                 <li><a href="/about">About</a></li>
-//                 <li><a href="/contact">Contact</a></li>
-//             </ul>
-//             <ul>
-//                 <li><a href="/login"><button>Login</button></a></li>
-//                 <li><a href="/register"><button>Register</button></a></li>
-//             </ul>
-//         </nav>
-//     );
-// }
-
-// export default Navigation;
-
-
-
 import React from "react";
 import style from "./Navigation.module.css";
 import nysc from "../../assets/nysc.png";
