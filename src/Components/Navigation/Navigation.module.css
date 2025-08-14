@@ -1,0 +1,187 @@
+/* Base styles */
+.navContainer {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.navLinksContainer {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-right: 1.5rem;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #93c5fd;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #93c5fd;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.authLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.authLinks li {
+  margin-left: 1rem;
+}
+
+.authLink {
+  text-decoration: none;
+}
+
+.loginButton, .registerButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginButton {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.registerButton {
+  background-color: white;
+  border: 1px solid white;
+  color: #1e3a8a;
+}
+
+.registerButton:hover {
+  background-color: #f3f4f6;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logoContainer {
+    width: 100%;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .navLinksContainer {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .navLinksContainer.mobileMenuOpen {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem 0;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navLinks li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .navLink {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .authLinks {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .authLinks li {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .loginButton, .registerButton {
+    width: 100%;
+    text-align: center;
+  }
+}
